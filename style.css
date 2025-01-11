@@ -7,26 +7,27 @@
 html, body{
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
 }
 header{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 header >video{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     object-fit: cover;
 }
 
 nav{
-    width: 100%;
+    width: 100vw;
     position: absolute;
     
 }
 .nav-content{
-    width: 100%;
+    width: 100vw;
     border-bottom: 1px solid rgb(184, 177, 177);
     display: flex;
     padding: 1% 3%;
@@ -177,8 +178,8 @@ nav{
 /* ==================section4=============== */
 
 .section4{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
    background-image: url(sec4-photo.webp);
    background-position: center;
    background-repeat: no-repeat;
@@ -190,7 +191,7 @@ nav{
     flex-direction: column;
     align-items: center;
    justify-content: center;
-   height: 100%;
+   height: 100vh;
    color: white;
 }
 
@@ -318,4 +319,48 @@ footer{
 }
 .foo-right > p{
     padding: 3% 0;
+}
+
+
+/* ==================responsive=========== */
+
+@media(max-width:600px){
+    /* header{
+        width: 200vw;
+        height: 100vh;
+    } */
+    .nav-midd > h1{
+        font-size: 16px;
+    }
+    .nav-right > p{
+        display: none;
+    }
+    .nav-bottom{
+        display: none;
+    }
+    .sec1-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .sec2-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .section3{
+        display: flex;
+        flex-direction: column;
+    }
+    .sec3-left > h1{
+        font-size: 30px;
+    }
+    
+    .sec7-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
 }
